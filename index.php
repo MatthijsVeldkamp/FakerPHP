@@ -3,8 +3,9 @@ require_once 'vendor/autoload.php';
 
 $faker = Faker\Factory::create('nl_NL');
 
-$roepnaam = $faker->firstName;
 $voornaam = $faker->firstName;
+/*
+$roepnaam = $voornaam;
 $tussenvoegsel = $faker->lastName;
 $achternaam = $faker->lastName;
 $huisnummer = $faker->buildingNumber;
@@ -14,14 +15,10 @@ $vast_telefoon = $faker->phoneNumber;
 $mobiel_telefoon = $faker->phoneNumber;
 $adres = $faker->streetAddress;
 $geboortedatum = $faker->date($format = 'Y-m-d', $max = 'now');
-$bsn_nummer = $faker->ssn;
-
-// Gebruik randomNumber voor een willekeurig getal, je moet zelf validatie toevoegen als nodig
-$bankrekening = $faker->randomNumber(10); // Dit geeft een willekeurig getal van 10 cijfers
 
 $bedrijfsnaam = $faker->company;
 
-echo $roepnaam. " ". $voornaam. " ". $tussenvoegsel. " ". $achternaam. " ". $huisnummer. " ". $postcode. " ". $plaats. " ". $vast_telefoon. " ". $mobiel_telefoon. " ". $adres. " ". $geboortedatum. " ". $bsn_nummer. " ". $bankrekening. " ". $bedrijfsnaam. "<br>";
+echo $roepnaam. " ". $voornaam. " ". $tussenvoegsel. " ". $achternaam. " ". $huisnummer. " ". $postcode. " ". $plaats. " ". $vast_telefoon. " ". $mobiel_telefoon. " ". $adres. " ". $geboortedatum. " ". $bedrijfsnaam. "<br>";*/
 
 ?>
 
@@ -31,8 +28,33 @@ echo $roepnaam. " ". $voornaam. " ". $tussenvoegsel. " ". $achternaam. " ". $hui
 <head>
     <meta charset="UTF-8">
     <title>Main</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
 </head>
 <body>
-    <h1>Welcome to the main page</h1>
+    <div class="container">
+        <h1 id="welcometext">Welcome to the main page</h1>
+        <h3><button id="getallusers" class="big_button" type="button">Get all users</button></h3>
+        <h2 class="DISABLED">Getting all users from db...</h2>
+        <div id="loader" class="loader DISABLED">
+            <div class="square-circle-5"></div>
+        </div>
+        <div id="smalltext" class="smalltext DISABLED">
+            <h4><i id="loadtext">Loading users...</i></h4>
+        </div>
+    </div>
+    <script defer src="showloader.js"></script>
 </body>
+<div class="footer">
+    <div class="outer">
+        <div class="wrap">
+            <div class="sub">
+                <p>Created by: <a href="#"><?php echo $voornaam?></a></p>
+            </div>
+            <div class="sub">
+                <p>&copy; <?php echo date("Y");?></p>
+            </div>
+        </div>
+    </div>
+</div>
 </html>

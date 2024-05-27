@@ -1,0 +1,190 @@
+:root[data-theme="light"] {
+    --text: #1f100f;
+    --background: #faf5f5;
+    --primary: #000000;
+    --secondary: #128387;
+    --accent: #00c3ff;
+}
+:root[data-theme="dark"] {
+    --text: #f0e1e0;
+    --background: #0a0505;
+    --primary: #ffffff;
+    --secondary: #78e9ed;
+    --accent: #00c3ff;
+}
+
+/*make default theme dark*/
+:root {
+    --text: #f0e1e0;
+    --background: #0a0505;
+    --primary: #ffffff;
+    --secondary: #78e9ed;
+    --accent: #00c3ff;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 3px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: var(--background);
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes fadein_loader
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeout
+{
+    0%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+@keyframes fadein
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.loader
+{
+    animation: fadein_loader 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s forwards;
+    animation-delay: 250ms;
+    opacity: 0;
+    margin-top: 25px;
+}
+
+.smalltext {
+    margin-top: 10px;
+    font-size: 15px;
+
+}
+.DISABLED
+{
+    pointer-events: none;
+    display: none;
+}
+
+.big_button
+{
+    animation: fadein 250ms ease-in-out forwards;
+    animation-delay: 500ms;
+    opacity: 0;
+    width: 120px;
+    height: 40px;
+    border: var(--text) 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 250ms ease-in-out, background 250ms ease-in-out, transform 250ms ease-in-out;
+}
+.big_button:hover
+{
+    background: var(--text);
+    color: var(--background);
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: width 250ms ease-in-out, height 250ms ease-in-out;
+}
+
+
+.fadeout {
+    animation: fadeout 250ms ease-in-out forwards;
+}
+
+.fadein {
+    animation: fadein 250ms ease-in-out forwards;
+}
+
+
+.outer
+{
+    padding: 12px;
+}
+
+.wrap
+{
+    margin: 0 auto;
+}
+
+.sub
+{
+    padding: 12px;
+    width: 32%;
+    height: 150px;
+    display: table-cell;
+    border-right : 1px solid var(--text);
+}
+
+.sub:last-child
+{
+    border-right: none;
+}
+
+.solid
+{
+    border: 0px;
+}
+
+
+.footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 25px;
+}
