@@ -55,6 +55,7 @@ echo $roepnaam. " ". $voornaam. " ". $tussenvoegsel. " ". $achternaam. " ". $hui
                 <p>&copy; <?php echo date("Y");?></p>
             </div>
         </div>
+
     </div>
 </div>
 </html>
