@@ -1,23 +1,30 @@
 <?php
 require_once 'vendor/autoload.php';
-// for loop
-for ($i = 0; $i < 1000; $i++) {
-    // put faker on Dutch
-    $faker = Faker\Factory::create('nl_NL');
-    echo $faker->name;
-    echo '<br>';
-    echo $faker->address;
-    echo '<br>';
-    echo $faker->email;
-    echo '<br>';
-    echo $faker->phoneNumber;
-    echo '<br>';
-    echo $faker->creditCardNumber;
-    echo '<br>';
-    echo $faker->creditCardType;
-    echo '<br>';
-}
+
+$faker = Faker\Factory::create('nl_NL');
+
+$roepnaam = $faker->firstName;
+$voornaam = $faker->firstName;
+$tussenvoegsel = $faker->lastName;
+$achternaam = $faker->lastName;
+$huisnummer = $faker->buildingNumber;
+$postcode = $faker->postcode;
+$plaats = $faker->city;
+$vast_telefoon = $faker->phoneNumber;
+$mobiel_telefoon = $faker->phoneNumber;
+$adres = $faker->streetAddress;
+$geboortedatum = $faker->date($format = 'Y-m-d', $max = 'now');
+$bsn_nummer = $faker->ssn;
+
+// Gebruik randomNumber voor een willekeurig getal, je moet zelf validatie toevoegen als nodig
+$bankrekening = $faker->randomNumber(10); // Dit geeft een willekeurig getal van 10 cijfers
+
+$bedrijfsnaam = $faker->company;
+
+echo $roepnaam. " ". $voornaam. " ". $tussenvoegsel. " ". $achternaam. " ". $huisnummer. " ". $postcode. " ". $plaats. " ". $vast_telefoon. " ". $mobiel_telefoon. " ". $adres. " ". $geboortedatum. " ". $bsn_nummer. " ". $bankrekening. " ". $bedrijfsnaam. "<br>";
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
