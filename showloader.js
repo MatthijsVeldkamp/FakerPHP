@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     button.addEventListener('click', function() {
+        window.location.href = '/connect.php';
+        
         button.classList.add('fadeout');
         welcometext.classList.add('fadeout');
         setTimeout(() => {
@@ -49,8 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     loadText.classList.add('fadein'); // Start fade-in
                     loadText.innerText = loadingSentences[currentIndex];
                 }, 250); // Match this timeout with your CSS transition duration
+                
                 currentIndex++;
             }
         }, 5000);
     });
+    
 });

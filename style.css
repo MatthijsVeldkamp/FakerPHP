@@ -6,24 +6,26 @@
         /* border: 10px purple inner solid; */
     }
 }
-html[data-theme="dark"] {
-    --text: #f0e1e0;
-    --background: #0a0505;
-    --primary: #ffffff;
-    --secondary: #78e9ed;
-    --accent: #00c3ff;
-    --footer: #232323;
-    --header: #232323;
-}
 :root {
-    --text: #1f100f;
-    --background: #faf5f5;
-    --primary: #000000;
-    --secondary: #128387;
-    --accent: #00c3ff;
-    --footer: #d7d7d7;
-    --header: #d7d7d7;
-}
+    --text: #0a1214;
+    --background: #ecf6f8;
+    --primary: #1b6779;
+    --secondary: #69d4ec;
+    --accent: #08bbe7;
+  }
+  :root[data-theme="dark"] {
+    --text: #ebf3f5;
+    --background: #071113;
+    --primary: #85d1e3;
+    --secondary: #137d96;
+    --accent: #16cbf7;
+    --header: #0a1214;
+    --footer: #0a1214;
+  }
+  
+  
+  
+  
 
 
 
