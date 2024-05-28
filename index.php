@@ -30,8 +30,14 @@ echo $roepnaam. " ". $voornaam. " ". $tussenvoegsel. " ". $achternaam. " ". $hui
     <title>Main</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loader.css">
+    <script src="theme.js"></script>
 </head>
 <body>
+    <div class="header">
+        <div class="headeritem">
+            <button><h5>Profile</h5></button>
+        </div>
+    </div>
     <div class="container">
         <h1 id="welcometext">Welcome to the main page</h1>
         <h3><button id="getallusers" class="big_button" type="button">Get all users</button></h3>
@@ -43,19 +49,13 @@ echo $roepnaam. " ". $voornaam. " ". $tussenvoegsel. " ". $achternaam. " ". $hui
             <h4><i id="loadtext">Loading users...</i></h4>
         </div>
     </div>
-    <script defer src="showloader.js"></script>
-</body>
-<div class="footer">
-    <div class="outer">
-        <div class="wrap">
-            <div class="sub">
-                <p>Created by: <a href="#"><?php echo $voornaam?></a></p>
-            </div>
-            <div class="sub">
-                <p>&copy; <?php echo date("Y");?></p>
-            </div>
-        </div>
-
-    </div>
+    <script src="showloader.js"></script>
 </div>
+<div class="footer">
+    <!-- <div class="seperator">
+    </div> -->
+    <div class="footeritem">
+    <h2>rr</h2>
+</div>
+</body>
 </html>

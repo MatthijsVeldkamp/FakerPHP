@@ -94,8 +94,9 @@
     content:"";
     position:absolute;
     border-radius:50px;
-    box-shadow:0 0 0 3px inset #fff;
-    animation:sc5 2.5s infinite;
+    box-shadow:0 0 0 3px inset var(--text);
+    animation:sc5 2.5s infinite ease-in-out;
+    
 }
 .square-circle-5:after {
     animation-delay:-1.25s;
